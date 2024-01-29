@@ -1,0 +1,27 @@
+<h1>{{reMsg}}</h1>
+<a href="/acct">See all names</a>
+<p id="serverr"><p>
+<script>
+async function postIt() {
+  try {
+    var xx = window.prompt('What is your name?')
+    const response = await fetch('/post', {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ xx }),
+    });
+    if (response.ok) {
+      const data = await response.json();
+      console.log(`Server response: ${data.msg}`);
+      document.getElementById('serverr').textContent = data.msg;
+    } else {
+      console.error(`Error with ${response.statusText}`);
+    }
+  } catch(err) {
+    console.log(`ERROR ${err}`)
+  }
+}
+postIt();
+</script>
