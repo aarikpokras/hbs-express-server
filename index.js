@@ -26,7 +26,7 @@ app.get('/acct', (req, res) => {
     pageTitle: "All names",
     heading: "Accounts",
   });
-  console.log('Sent /page')
+  console.log('Sent /acct')
 });
 
 app.post('/post', (request, reply) => {
