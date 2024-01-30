@@ -1,10 +1,10 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
-const bodyParser = require('body-parser');
+const bp = require('body-parser');
 const app = express();
 const fs = require('fs');
 
-app.use(bodyParser.json());
+app.use(bp.json());
 
 const hbs = exphbs.create({
   extname: 'hbs',
