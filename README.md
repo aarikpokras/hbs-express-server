@@ -10,3 +10,6 @@ If that doesn't work, just manually run `node index.js`.
 
 ## Ports
 To set what port you want the server to listen on, adjust the PORT environment variable.
+
+## Other stuff
+If you're new to this stuff, it really helps to look at the index.js file. If you just make a directory called `page` or something, it won't show up when the user goes to /page.
