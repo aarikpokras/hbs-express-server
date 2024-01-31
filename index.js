@@ -34,8 +34,7 @@ try {
   var xx = request.body.xx;
   console.log("User entered " + xx);
   reply.json({ msg: `${xx}` });
-  const fpath = "./views/page.hbs";
-  fs.appendFile(fpath, xx+"<br />", (err) => {
+  fs.appendFile("./views/page.hbs", xx+"<br />", (err) => {
     if (err) {
       console.error('ERROR!! ' + err);
     } else {
