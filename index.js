@@ -38,7 +38,7 @@ try {
     if (err) {
       console.error('ERROR!! ' + err);
     } else {
-      console.log('Written to ' + fpath);
+      console.log('Written to views/page.hbs');
     }
   });
 } catch(err) {
